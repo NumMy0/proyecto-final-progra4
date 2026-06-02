@@ -1,4 +1,4 @@
-# Mi Sitio Maquillaje / SistemaMakeup
+# Cuties
 
 Proyecto de tienda de maquillaje dividido en dos partes:
 
