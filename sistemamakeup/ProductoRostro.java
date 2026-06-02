@@ -3,8 +3,8 @@ package sistemamakeup;
 public class ProductoRostro extends Producto {
     private String tipoPiel; // Ej: Grasa, Seca, Mixta
 
-    public ProductoRostro(String id, String nombre, double precioBase, String marca, String tipoPiel) {
-        super(id, nombre, precioBase, marca); // Llama al constructor de la clase padre
+    public ProductoRostro(String id, String nombre, double precioBase, String marca, int stock, String tipoPiel) {
+        super(id, nombre, precioBase, marca, stock); // Llama al constructor de la clase padre
         this.tipoPiel = tipoPiel;
     }
 

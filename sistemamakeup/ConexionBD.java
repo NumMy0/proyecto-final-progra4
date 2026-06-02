@@ -6,8 +6,8 @@ import java.sql.SQLException;
 public class ConexionBD {
     // Configuración para MySQL en XAMPP (Puerto por defecto 3306)
     private static final String URL = "jdbc:mysql://localhost:3306/sistema_maquillaje?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "root";
-    private static final String PASSWORD = ""; // Vacío por defecto en XAMPP
+    private static final String USER = System.getenv().getOrDefault("MYSQL_USER", "root");
+    private static final String PASSWORD = System.getenv().getOrDefault("MYSQL_PASSWORD", "");
 
     public static Connection conectar() {
         Connection con = null;

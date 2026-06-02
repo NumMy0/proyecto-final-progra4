@@ -6,13 +6,15 @@ public abstract class Producto implements Descontable {
     private String nombre;
     private double precioBase;
     private String marca;
+    private int stock;
 
     // Constructor
-    public Producto(String id, String nombre, double precioBase, String marca) {
+    public Producto(String id, String nombre, double precioBase, String marca, int stock) {
         this.id = id;
         this.nombre = nombre;
         this.precioBase = precioBase;
         this.marca = marca;
+        this.stock = stock;
     }
 
     // Método abstracto que cada hijo implementará de forma distinta
@@ -35,4 +37,7 @@ public abstract class Producto implements Descontable {
 
     public String getMarca() { return marca; }
     public void setMarca(String marca) { this.marca = marca; }
+
+    public int getStock() { return stock; }
+    public void setStock(int stock) { this.stock = stock; }
 }

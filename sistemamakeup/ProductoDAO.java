@@ -22,15 +22,16 @@ public class ProductoDAO {
                 String nombre = rs.getString("nombre");
                 double precio = rs.getDouble("precioBase");
                 String marca = rs.getString("marca");
+                int stock = rs.getInt("stock");
                 String tipo = rs.getString("tipo");
                 String atributo = rs.getString("atributoEspecial");
 
                 // Reconstruimos el objeto polimórfico según el tipo en la BD
                 if (tipo.equalsIgnoreCase("Rostro")) {
-                    lista.add(new ProductoRostro(id, nombre, precio, marca, atributo));
+                    lista.add(new ProductoRostro(id, nombre, precio, marca, stock, atributo));
                 } else if (tipo.equalsIgnoreCase("Ojos")) {
                     boolean esWaterproof = Boolean.parseBoolean(atributo);
-                    lista.add(new ProductoOjos(id, nombre, precio, marca, esWaterproof));
+                    lista.add(new ProductoOjos(id, nombre, precio, marca, stock, esWaterproof));
                 }
             }
         } catch (SQLException e) {

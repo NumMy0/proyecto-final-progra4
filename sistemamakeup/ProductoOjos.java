@@ -3,8 +3,8 @@ package sistemamakeup;
 public class ProductoOjos extends Producto {
     private boolean esAPruebaDeAgua;
 
-    public ProductoOjos(String id, String nombre, double precioBase, String marca, boolean esAPruebaDeAgua) {
-        super(id, nombre, precioBase, marca);
+    public ProductoOjos(String id, String nombre, double precioBase, String marca, int stock, boolean esAPruebaDeAgua) {
+        super(id, nombre, precioBase, marca, stock);
         this.esAPruebaDeAgua = esAPruebaDeAgua;
     }
 
